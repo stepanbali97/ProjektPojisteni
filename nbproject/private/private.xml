@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/xampp/htdocs/EvidencePojisteni/pohledy/registrace.phtml</file>
+            <file>file:/C:/xampp/htdocs/EvidencePojisteni/kontrolery/SmerovacKontroler.php</file>
+            <file>file:/C:/xampp/htdocs/EvidencePojisteni/modely/Db.php</file>
+            <file>file:/C:/xampp/htdocs/EvidencePojisteni/modely/NovyPojistenec.php</file>
+            <file>file:/C:/xampp/htdocs/EvidencePojisteni/pohledy/rozlozeni.phtml</file>
+            <file>file:/C:/xampp/htdocs/EvidencePojisteni/pohledy/pojistenci.phtml</file>
+            <file>file:/C:/xampp/htdocs/EvidencePojisteni/pohledy/chyba404.phtml</file>
+            <file>file:/C:/xampp/htdocs/EvidencePojisteni/index.php</file>
+            <file>file:/C:/xampp/htdocs/EvidencePojisteni/kontrolery/PojistenciKontroler.php</file>
+            <file>file:/C:/xampp/htdocs/EvidencePojisteni/kontrolery/NovyPojistenecKontroler.php</file>
+            <file>file:/C:/xampp/htdocs/EvidencePojisteni/pohledy/menu.phtml</file>
+            <file>file:/C:/xampp/htdocs/EvidencePojisteni/pohledy/paticka.phtml</file>
+            <file>file:/C:/xampp/htdocs/EvidencePojisteni/pohledy/chyba500.phtml</file>
+            <file>file:/C:/xampp/htdocs/EvidencePojisteni/kontrolery/Kontroler.php</file>
+            <file>file:/C:/xampp/htdocs/EvidencePojisteni/kontrolery/ChybaKontroler.php</file>
+            <file>file:/C:/xampp/htdocs/EvidencePojisteni/styly.css</file>
+        </group>
+    </open-files>
+</project-private>

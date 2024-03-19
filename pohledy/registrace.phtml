@@ -1,0 +1,77 @@
+<h2>Registrace nového pojištěnce</h2>
+
+<form method="post">
+    <?php
+    if ($formular['jmeno']['ok'] === false) {
+        $jmenoClass = 'chyba-ramecek';
+    } else {
+        $jmenoClass = '';
+    }
+    ?>
+    <div class="<?= $jmenoClass ?>">
+        <label for="jmeno">
+            Jméno</label><br>
+        <input type="text" placeholder="Jan" name="jmeno" id="jmeno" value="<?= $formular['jmeno']['poslanaHodnota'] ?>"/>
+        <?php
+        if ($formular['jmeno']['ok'] === false) {
+            ?> 
+            <div class="chyba"><?= $formular['jmeno']['chybovaZprava'] ?></div>
+        <?php } ?> 
+    </div>
+    <br>
+    <?php
+    if ($formular['prijmeni']['ok'] === false) {
+        $prijmeniClass = 'chyba-ramecek';
+    } else {
+        $prijmeniClass = '';
+    }
+    ?>
+    <div class="<?= $prijmeniClass ?>">
+        <label for="prijmeni">
+            Příjmení</label><br>
+        <input type="text" placeholder="Novák" name="prijmeni" id="prijmeni" value="<?= $formular['prijmeni']['poslanaHodnota'] ?>"/>
+        <?php
+        if ($formular['prijmeni']['ok'] === false) {
+            ?>
+            <div class="chyba"><?= $formular['prijmeni']['chybovaZprava'] ?></div>
+        <?php } ?>
+    </div>
+    <br>
+    <?php
+    if ($formular['vek']['ok'] === false) {
+        $vekClass = 'chyba-ramecek';
+    } else {
+        $vekClass = '';
+    }
+    ?>
+    <div class="<?= $vekClass ?>">
+        <label for="vek">
+            Věk</label><br>
+        <input type="text" placeholder="18" name="vek" id="vek" value="<?= $formular['vek']['poslanaHodnota'] ?>" />
+        <?php
+        if ($formular['vek']['ok'] === false) {
+            ?>
+            <div class="chyba"><?= $formular['vek']['chybovaZprava'] ?></div>
+        <?php } ?>
+    </div>
+    <br>
+    <?php
+    if ($formular['telefon']['ok'] === false) {
+        $telefonClass = 'chyba-ramecek';
+    } else {
+        $telefonClass = '';
+    }
+    ?>
+    <div class="<?= $telefonClass ?>">
+        <label for="telefon">
+            Telefonní číslo</label><br>
+        <input type="text" placeholder="+420123456789" name="telefon" id="telefon" value="<?= $formular['telefon']['poslanaHodnota'] ?>"/>
+        <?php
+        if ($formular['telefon']['ok'] === false) {
+            ?>
+            <div class="chyba"><?= $formular['telefon']['chybovaZprava'] ?></div>
+        <?php } ?>
+    </div>
+    <br>
+    <input type="submit" value="Uložit" />
+</form>

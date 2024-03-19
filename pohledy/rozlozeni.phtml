@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="cs-cz">
+    <head>
+        <base href="/localhost" />
+        <meta charset="UTF-8" />
+        <title><?= $titulek ?></title>
+        <meta name="description" content="<?= $popis ?>" />
+        <meta name="keywords" content="<?= $klicova_slova ?>" />
+        <link rel="stylesheet" href="styly.css" type="text/css"/>
+    </head>
+
+    <body>
+        <div class="menu">
+            <header>
+                <h1>Evidence pojištění</h1>
+            </header>
+            <?php include __DIR__ . '/menu.phtml'; ?>
+        </div>
+        <div class="obsah">
+            <?php foreach ($zpravy as $zprava) : ?>
+                <p class="zprava"><?= $zprava ?></p>
+            <?php endforeach ?>
+
+            <article>
+                <?php $this->kontroler->vypisPohled(); // vložení aktuálního pohledu do šablony ?>
+            </article>
+        </div>
+        <footer>
+            <?php include __DIR__ . '/paticka.phtml'; ?>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<h2>Seznam pojištěnců</h2>
+<?php if (sizeof($pojistenci) > 0) { ?>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Jméno</th>
+            <th>Příjmení</th>
+            <th>Telefon</th>
+            <th>Věk</th>
+        </tr>
+        <?php
+        foreach ($pojistenci as $pojistenec) {
+            ?>
+            <tr>
+                <td align="right"><?= $pojistenec['ID'] ?></td>
+                <td><?= $pojistenec['Jmeno'] ?></td>
+                <td><?= $pojistenec['Prijmeni'] ?></td>
+                <td><?= $pojistenec['Telefon'] ?></td>
+                <td align="right"><?= $pojistenec['Vek'] ?></td>
+            </tr>
+            <?php
+        }
+        ?>
+    </table>
+    <?php
+} else {
+    ?>
+    <div>Žádní pojištěnci neexistují</div>
+
+<?php } ?>
+
