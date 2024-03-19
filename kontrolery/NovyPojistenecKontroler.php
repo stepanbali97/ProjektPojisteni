@@ -3,18 +3,14 @@
 /**
  * Kontroler pro evidenci nového pojištěnce
  */
-
 class NovyPojistenecKontroler extends Kontroler {
 
-    
-    
     private bool $formularOk = true; // jestli je formulář spravně vyplněný
 
     /**
      * Vytvoření struktury pro další použití v ostatních metodách
      * @return void
      */
-    
     private function nastavVychoziHodnotyFormulare(): void {
         $this->data['formular'] = [];
 
@@ -44,7 +40,6 @@ class NovyPojistenecKontroler extends Kontroler {
      * Pracuje s instančními proměnnými $this->formularOK a $this->data['formular']['jmeno']
      * @return string Ošetřené jméno
      */
-    
     private function validaceJmena(): string {
         if (!array_key_exists('jmeno', $_POST)) {
             $_POST['jmeno'] = '';
@@ -69,7 +64,6 @@ class NovyPojistenecKontroler extends Kontroler {
      * Pracuje s instančními proměnnými $this->formularOK a $this->data['formular']['prijmeni']
      * @return string Ošetřené příjmení
      */
-    
     private function validacePrijmeni(): string {
         if (!array_key_exists('prijmeni', $_POST)) {
             $_POST['prijmeni'] = '';
@@ -94,16 +88,15 @@ class NovyPojistenecKontroler extends Kontroler {
      * Pracuje s instančními proměnnými $this->formularOK a $this->data['formular']['vek']
      * @return string Ošetřený věk
      */
-    
     private function validaceVek(): int {
         if (!array_key_exists('vek', $_POST)) {
             $_POST['vek'] = '';
         }
         $vekPost = trim((string) $_POST['vek']);
         $vek = (int) $vekPost;
-               
+
         $this->data['formular']['vek']['poslanaHodnota'] = $vekPost;
-       if ($vekPost !== (string) $vek) { // věk není zadaný čísly
+        if ($vekPost !== (string) $vek) { // věk není zadaný čísly
             $this->data['formular']['vek']['chybovaZprava'] = 'Věk zadávejte pouze číslicemi.';
             $this->data['formular']['vek']['ok'] = false;
             $this->formularOk = false;
@@ -124,7 +117,6 @@ class NovyPojistenecKontroler extends Kontroler {
      * Pracuje s instančními proměnnými $this->formularOK a $this->data['formular']['telefon']
      * @return string Ošetřené telefonní číslo
      */
-    
     private function validaceTelefon(): string {
         if (!array_key_exists('telefon', $_POST)) {
             $_POST['telefon'] = '';
@@ -149,7 +141,6 @@ class NovyPojistenecKontroler extends Kontroler {
      * @param array $parametry
      * @return void
      */
-    
     public function zpracuj(array $parametry): void {
 
 
@@ -163,7 +154,6 @@ class NovyPojistenecKontroler extends Kontroler {
         $this->nastavVychoziHodnotyFormulare();
 
         if ($_POST) { // zpracování odeslaného formuláře ze strany uživatele
-
             $jmeno = $this->validaceJmena();
             $prijmeni = $this->validacePrijmeni();
             $vek = $this->validaceVek();

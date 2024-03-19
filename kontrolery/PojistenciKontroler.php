@@ -3,7 +3,6 @@
 /**
  * Kontroler pro výpis všech registrovaných pojištěnců
  */
-
 class PojistenciKontroler extends Kontroler {
 
     public function zpracuj(array $parametry): void {
@@ -18,5 +17,5 @@ class PojistenciKontroler extends Kontroler {
 
         $this->pohled = 'pojistenci';
     }
+
 }
-    

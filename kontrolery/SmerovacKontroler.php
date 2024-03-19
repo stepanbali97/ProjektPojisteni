@@ -4,20 +4,18 @@
  * Směrovač (router), který podle URL volá jiný kontroler, jenž tvoří pohled, 
  * který je následně vložen do šablony strámky
  */
-
 class SmerovacKontroler extends Kontroler {
 
     /**
      * @var Kontroler Instalace kontroleru
      */
-    protected Kontroler $kontroler; 
+    protected Kontroler $kontroler;
 
     /**
      * Parsuje URL podle "/" a vracípole parametrů
      * @param string $url URL pro naparsování
      * @return array Pole URL parametrů
      */
-    
     private function parsujURL(string $url): array {
         $naparsovanaURL = parse_url($url); // vytvoří asociativní pole z naparsované URL
         $naparsovanaURL["path"] = ltrim($naparsovanaURL["path"], "/"); // osekání "/" z naparsované URL zleva
@@ -47,7 +45,6 @@ class SmerovacKontroler extends Kontroler {
 
 
         $this->kontroler->zpracuj($cesta); // volání kontroleru
-
         // proměnné pro šablonu
         $this->data['titulek'] = $this->kontroler->hlavicka['titulek'];
         $this->data['popis'] = $this->kontroler->hlavicka['popis'];

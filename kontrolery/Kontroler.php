@@ -8,18 +8,16 @@ abstract class Kontroler {
     /**
      * @var array Prázdné pole, indexy jsou vidět v šabloně jako běžné proměnné
      */
-    
     protected array $data = array();
-    
+
     /**
      * @var string Název příslušné šablony bez přípony
      */
     protected string $pohled = "";
-    
+
     /**
      * @var array|string Hlavička příslušné HTML stránky
      */
-    
     protected array $hlavicka = array('titulek' => '', 'klicova_slova' => '', 'popis' => '');
 
     /**
@@ -58,7 +56,6 @@ abstract class Kontroler {
      * @param string $zprava zpráva pro zobrazení př. Úspěšné přidání pojištěnce
      * @return void
      */
-    
     public function pridejZpravu(string $zprava): void {
         if (isset($_SESSION['zpravy']))
             $_SESSION['zpravy'][] = $zprava;
@@ -70,7 +67,6 @@ abstract class Kontroler {
      * Vrací zprávy určené pro uživatele evidence pojištění
      * @return array Pole uložených hlášek pro zobrazování
      */
-    
     public function vratZpravy(): array {
         if (isset($_SESSION['zpravy'])) {
             $zpravy = $_SESSION['zpravy'];
@@ -97,5 +93,4 @@ abstract class Kontroler {
      * @return void 
      */
     abstract function zpracuj(array $parametry): void;
-    
 }
